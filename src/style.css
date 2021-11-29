@@ -1,0 +1,18 @@
+.center {
+  margin-left: 200px;
+  width: 200px; /* Ширина элемента в пикселах */
+  padding: 10px; /* Поля вокруг текста */
+  /*// margin: auto; !* Выравниваем по центру *!*/
+  background: #fc0; /* Цвет фона */
+}
+
+div {
+  width: 200px; /* Ширина элемента в пикселах */
+  padding: 10px; /* Поля вокруг текста */
+  margin: auto; /* Выравниваем по центру */
+  background: #ffcc00; /* Цвет фона */
+}
+
+*{
+  background: brown;
+}

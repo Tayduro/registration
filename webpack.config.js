@@ -1,5 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+let sourceDir = path.resolve(__dirname, 'src');
+let buildDir = path.resolve(__dirname, 'dist');
 
 module.exports = {
   mode: 'development',
@@ -34,6 +38,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       favicon: './src/assets/favicon.ico',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(sourceDir, 'style.css'),
+          to: path.resolve(buildDir, 'style.css'),
+        },
+        {
+          from: path.resolve(sourceDir, 'confirmedRegistration.html'),
+          to: path.resolve(buildDir, 'confirmedRegistration.html'),
+        },
+      ],
     }),
   ],
 };
